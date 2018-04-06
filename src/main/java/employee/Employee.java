@@ -1,6 +1,6 @@
 package employee;
 
-public abstract class Employee {
+public abstract class Employee implements IPayable {
     private static int count = 0;
     private String firstName;
     private String lastName;
@@ -26,6 +26,10 @@ public abstract class Employee {
     public void setLastName(String lastName) { this.lastName = lastName; }
 
     public String getSocialSecurityNumber() { return socialSecurityNumber; }
+
+    public double getPaymentAmount() {
+        return this.getEarnings();
+    }
 
     // @Override
     public String toString(String extraKeys) {

@@ -1,6 +1,6 @@
 package employee;
 
-public class HourlyEmployee extends Employee {
+public class HourlyEmployee extends Employee implements IPayable {
     private double wage;
     private double hours;
 

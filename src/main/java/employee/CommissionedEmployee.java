@@ -1,8 +1,8 @@
 package employee;
 
-public class CommissionedEmployee extends Employee {
-    private double grossSales;
-    private double commissionRate;
+public class CommissionedEmployee extends Employee implements IPayable {
+    protected double grossSales;
+    protected double commissionRate;
 
     public CommissionedEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate) {
         super(firstName, lastName, socialSecurityNumber);

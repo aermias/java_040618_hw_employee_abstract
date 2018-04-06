@@ -1,6 +1,6 @@
 package employee;
 
-public class SalariedEmployee extends Employee {
+public class SalariedEmployee extends Employee implements IPayable {
     private double salary;
 
     public SalariedEmployee(String firstName, String lastName, String socialSecurityNumber, double salary) {

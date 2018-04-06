@@ -1,16 +1,14 @@
 package employee;
 
-public class BasePlusCommissionEmployee extends CommissionedEmployee {
+public class BasePlusCommissionEmployee extends CommissionedEmployee implements IPayable {
     private double baseSalary;
 
-    public BasePlusCommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grosssSales, double commissionRate, double baseSalary) {
+    public BasePlusCommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate, double baseSalary) {
         super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate);
         this.baseSalary = baseSalary;
     }
 
-    double getEarnings() {
-        return this.baseSalary + this.grossSales * (this.commissionRate / 100)
-    }
+    double getEarnings() { return this.baseSalary + this.grossSales * (this.commissionRate / 100); }
 
     @Override
     public String toString() {
@@ -18,5 +16,6 @@ public class BasePlusCommissionEmployee extends CommissionedEmployee {
                 "grossSales=" + grossSales +
                         ",\n  commissionRate=" + commissionRate +
                         ",\n  baseSalary=" + baseSalary
-
+        );
     }
+}
